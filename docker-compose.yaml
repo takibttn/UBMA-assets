@@ -1,0 +1,30 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: ubma_ceil_postgres
+    restart: always
+    ports:
+      - '5436:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ubma_ceil_db
+    volumes:
+      - ubma_ceil_pg_data:/var/lib/postgresql/data
+
+  postgres_test:
+    image: postgres:17
+    container_name: ubma_ceil_postgres_test
+    restart: unless-stopped
+    ports:
+      - '5437:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ubma_ceil_test
+    volumes:
+      - ubma_ceil_test_pg_data:/var/lib/postgresql/data
+
+volumes:
+  ubma_ceil_pg_data:
+  ubma_ceil_test_pg_data:

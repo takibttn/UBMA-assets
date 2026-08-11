@@ -1,0 +1,23 @@
+{
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "rootDir": "..",
+  "testEnvironment": "node",
+  "testMatch": ["<rootDir>/test/**/*.e2e-spec.ts"],
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "^@/(.*)$": "<rootDir>/src/$1",
+    "^@common/(.*)$": "<rootDir>/src/common/$1",
+    "^@modules/(.*)$": "<rootDir>/src/modules/$1",
+    "^@lib/(.*)$": "<rootDir>/src/lib/$1",
+    "^@config/(.*)$": "<rootDir>/src/config/$1"
+  },
+  "setupFilesAfterEnv": ["<rootDir>/test/jest-setup.e2e.ts"],
+  "globalSetup": "<rootDir>/test/global-setup.e2e.ts",
+  "globalTeardown": "<rootDir>/test/global-teardown.e2e.ts",
+  "testTimeout": 120000,
+  "maxWorkers": 1,
+  "forceExit": true,
+  "detectOpenHandles": true
+}

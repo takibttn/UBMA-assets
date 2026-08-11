@@ -1,0 +1,23 @@
+Phase 1 — Backend foundation
+NestJS, Docker PostgreSQL, Drizzle, env local, Swagger, API prefix, aliases, base modules.
+
+Phase 2 — Auth & users
+Login by bacYear + matricule + password, roles: ADMIN, ENSEIGNANT, ETUDIANT.
+
+Phase 3 — Formations
+Admin creates formations, assigns teacher, price, start/end date, capacity, stop sale.
+
+Phase 4 — Enrollments
+Student sees catalogue, enrolls, cannot enroll if sale closed/full/already enrolled.
+
+Phase 5 — Dashboards
+Admin stats, teacher assigned formations, student enrolled formations.
+
+Phase 6 — Calendar
+Return formation dates as calendar events.
+
+Phase 7 — Notifications
+Mock email service: notify teacher/admin after student enrollment.
+
+Phase 8 — Optional
+Progress tracking, certificates/badges.
